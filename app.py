@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 
 # Page settings
 st.set_page_config(page_title="Double-slit Simulation", layout="centered")
-st.title("🌈 Double-slit Interference Simulation (with Single-slit Diffraction)")
+st.title("Double-slit Interference Simulation (with Single-slit Diffraction)")
 
 # Parameter controls
-lambda_nm = st.slider("Wavelength λ (nm)", 400.0, 700.0, 633.0)
-d_mm = st.slider("Slit spacing d (mm)", 0.1, 0.5, 0.2)
-a_mm = st.slider("Slit width a (mm)", 0.01, 0.1, 0.05)
-D_m = st.slider("Screen distance D (m)", 0.5, 2.0, 1.0)
+lambda_nm = st.slider("波长 λ (nm)", 400.0, 700.0, 633.0)
+d_mm = st.slider("双缝间距 d (mm)", 0.1, 0.5, 0.2)
+a_mm = st.slider("单缝宽度 a (mm)", 0.01, 0.1, 0.05)
+D_m = st.slider("屏幕距离 D (m)", 0.5, 2.0, 1.0)
 
 # Unit conversion
 lambda_ = lambda_nm * 1e-9
@@ -41,3 +41,4 @@ ax2.imshow(intensity.reshape(1, -1), cmap='gray',
 ax2.set_xlabel("Screen position x (m)")
 ax2.set_title("Interference Fringe Simulation")
 st.pyplot(fig2)
+
