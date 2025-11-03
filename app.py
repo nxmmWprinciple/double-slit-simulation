@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Page settings
 st.set_page_config(page_title="Double-slit Simulation", layout="centered")
-st.title("Double-slit Interference Simulation (with Single-slit Diffraction)")
+st.title("双缝干涉光强模拟（含单缝衍射）")
 
 # Parameter controls
 lambda_nm = st.slider("波长 λ (nm)", 400.0, 700.0, 633.0)
@@ -41,4 +41,5 @@ ax2.imshow(intensity.reshape(1, -1), cmap='gray',
 ax2.set_xlabel("Screen position x (m)")
 ax2.set_title("Interference Fringe Simulation")
 st.pyplot(fig2)
+
 
